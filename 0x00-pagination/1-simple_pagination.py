@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-import csv
+"""
+start and end
+"""
+
+
 from typing import Tuple, List
-"""
-index range
-"""
+import csv
 
 
 def index_range(page: int, page_size: int) -> Tuple:
     """
-    index range method
+    start and end
     """
-    startindex = (page - 1) * page_size
-    endindex = page * page_size
-    return (startindex, endindex)
+    start = (page - 1) * page_size
+    end = page * page_size
+    return(start, end)
 
 
 class Server:
@@ -36,12 +38,12 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
-        get page method
+        get page
         """
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
-        start_index, end_index = index_range(page, page_size)
-        dataset = self.dataset()
-        if start_index >= len(dataset):
+        start, end = index_range(page, page_size)
+        data = self.dataset()
+        if start >= len(data):
             return []
-        return dataset[start_index:end_index]
+        return data[start:end]
