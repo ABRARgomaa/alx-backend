@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 import csv
-import math
-from typing import List
+from typing import Tuple, List
 """
 index range
 """
 
 
-def index_range(page: int, page_size: int) -> tuple:
+def index_range(page: int, page_size: int) -> Tuple:
     """
     index range method
     """
