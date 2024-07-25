@@ -24,7 +24,7 @@ class LIFOCache(BaseCaching):
         """
         Add an item to the cache with the given key.
 
-        If the cache exceeds the maximum size, the last item inserted is discarded.
+        If the cache exceeds the maximum size, the lastitem discarded.
 
         Args:
             key (str): The key of the item.
