@@ -30,8 +30,7 @@ class LIFOCache(BaseCaching):
         if key not in self.queue:
             self.queue.append(key)
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            latest_key = self.queue[3]
-            self.queue.remove(self.queue[3])
+            latest_key = self.queue.pop()
             if latest_key in self.cache_data:
                 del self.cache_data[latest_key]
                 print(f"DISCARD: {latest_key}")
