@@ -63,3 +63,4 @@ yarn.lock
 # Docker files
 Dockerfile
 docker-compose.yml
+redis-6.0.10/
